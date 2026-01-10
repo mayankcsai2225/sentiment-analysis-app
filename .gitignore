@@ -86,8 +86,9 @@ dmypy.json
 Thumbs.db
 
 # Project specific - MODELS ALLOWED FOR DEPLOYMENT
-# models/*.joblib  # Commented out for deployment
-# models/*.bin     # Commented out for deployment
+# model.joblib is included (small file)
+# Large FastText model excluded - will download automatically via setup.sh
+models/fasttext_model_cbow.bin
 models/transformers_model/
 *.db
 feedback.db
