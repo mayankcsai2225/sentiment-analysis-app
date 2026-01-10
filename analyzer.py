@@ -66,16 +66,18 @@ class SentimentAnalyzer:
         """
         self.model_type = model_type
         
-        # Load Spacy - download model if not found
+        # Load Spacy model
+        # Note: Model should be installed via requirements.txt for Streamlit Cloud
         try:
             self.nlp = spacy.load('en_core_web_sm')
-        except OSError:
-            # Model not found, download it
-            import subprocess
-            import sys
-            print("📦 spaCy model 'en_core_web_sm' not found. Downloading...")
-            subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
-            self.nlp = spacy.load('en_core_web_sm')
+        except OSError as e:
+            # If model is still not found, provide helpful error message
+            error_msg = (
+                f"spaCy model 'en_core_web_sm' not found. "
+                f"Please ensure it's installed via requirements.txt. "
+                f"Error: {str(e)}"
+            )
+            raise RuntimeError(error_msg) from e
         sentencizer = Sentencizer(punct_chars=[".", "!", "?", "\n", "\r", ";"])
         if 'sentencizer' not in self.nlp.pipe_names:
             self.nlp.add_pipe('sentencizer', last=True)
