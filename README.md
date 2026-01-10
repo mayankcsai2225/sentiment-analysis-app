@@ -1,3 +1,15 @@
+---
+title: Sentiment Analysis ML
+emoji: 🎯
+colorFrom: red
+colorTo: purple
+sdk: streamlit
+sdk_version: 1.52.2
+app_file: streamlit_app.py
+pinned: false
+license: mit
+---
+
 # 🎯 Product Review Sentiment Analysis
 
 An advanced ML-powered sentiment analysis application that analyzes product reviews using multiple machine learning models. Built with Streamlit, featuring rich visualizations, batch processing, and model explainability.
@@ -19,9 +31,10 @@ An advanced ML-powered sentiment analysis application that analyzes product revi
 
 ## 🚀 Live Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
+This app is deployed on Hugging Face Spaces! Try it out:
+**[🔗 Open the App](https://huggingface.co/spaces/YOUR_USERNAME/sentiment-analysis-ml)**
 
-*Deploy your own instance using the deployment guide below!*
+*Replace YOUR_USERNAME with your Hugging Face username*
 
 ## 📋 Table of Contents
 
@@ -35,11 +48,6 @@ An advanced ML-powered sentiment analysis application that analyzes product revi
 - [License](#license)
 
 ## 🛠️ Installation
-
-### Prerequisites
-
-- Python 3.11 or higher
-- pip package manager
 
 ### Local Setup
 
@@ -63,7 +71,6 @@ An advanced ML-powered sentiment analysis application that analyzes product revi
 3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
-   python -m spacy download en_core_web_sm
    ```
 
 4. **Run the application**
@@ -122,36 +129,34 @@ An advanced ML-powered sentiment analysis application that analyzes product revi
 
 ## 🚀 Deployment
 
-### Streamlit Cloud (Recommended - Free)
+### Hugging Face Spaces (Recommended - Free)
 
-1. **Prepare your repository**
-   ```bash
-   # Use deployment-friendly .gitignore
-   cp .gitignore.deploy .gitignore
-   
-   # Add and commit all files including models
-   git add .
-   git commit -m "Ready for deployment"
-   git push origin main
-   ```
+1. **Create a Hugging Face account** at [huggingface.co](https://huggingface.co)
 
-2. **Deploy on Streamlit Cloud**
-   - Go to [share.streamlit.io](https://share.streamlit.io)
-   - Sign in with GitHub
-   - Click "New app"
-   - Select your repository
-   - Set Main file path to: `streamlit_app.py`
-   - Click "Deploy"
+2. **Create a new Space**:
+   - Go to [huggingface.co/spaces](https://huggingface.co/spaces)
+   - Click "Create new Space"
+   - Select "Streamlit" as SDK
+   - Set visibility to "Public"
 
-3. **Your app will be live in 5-10 minutes!**
+3. **Upload your code**:
+   - Use Git: `git push huggingface main`
+   - Or upload files via web interface
 
-For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md) or [QUICK_DEPLOY.md](QUICK_DEPLOY.md).
+4. **Your app will be live in 2-5 minutes!**
 
-### Other Platforms
+For detailed instructions, see [HUGGINGFACE_DEPLOY.md](HUGGINGFACE_DEPLOY.md).
 
-- **Render**: See `render.yaml` and [DEPLOYMENT.md](DEPLOYMENT.md)
-- **Railway**: See `Procfile` and [DEPLOYMENT.md](DEPLOYMENT.md)
-- **Docker**: See `Dockerfile` and `docker-compose.yml`
+### Streamlit Cloud
+
+1. Go to [share.streamlit.io](https://share.streamlit.io)
+2. Sign in with GitHub
+3. Click "New app"
+4. Select your repository
+5. Set Main file path to: `streamlit_app.py`
+6. Click "Deploy"
+
+For detailed instructions, see [STREAMLIT_CLOUD_DEPLOY.md](STREAMLIT_CLOUD_DEPLOY.md).
 
 ## 📁 Project Structure
 
@@ -168,26 +173,15 @@ sentiment_analysis_ml_part-master/
 ├── config.py                  # Configuration settings
 │
 ├── models/                    # ML model files
-│   ├── model.joblib          # Trained logistic regression model
-│   └── fasttext_model_cbow.bin  # FastText embeddings
+│   └── model.joblib          # Trained logistic regression model
 │
 ├── csv_files/                 # Sample CSV data files
 │
-├── requirements.txt           # Development dependencies
-├── requirements-deploy.txt    # Deployment dependencies
-├── packages.txt              # System dependencies
+├── requirements.txt           # Python dependencies
+├── README.md                  # This file (with HF Spaces config)
 │
-├── .streamlit/
-│   └── config.toml           # Streamlit configuration
-│
-├── Dockerfile                # Docker configuration
-├── docker-compose.yml        # Docker Compose setup
-├── Procfile                 # For Heroku/Railway
-├── render.yaml              # For Render deployment
-│
-├── DEPLOYMENT.md            # Comprehensive deployment guide
-├── QUICK_DEPLOY.md          # Quick deployment guide
-└── README.md                # This file
+└── .streamlit/
+    └── config.toml           # Streamlit configuration
 ```
 
 ## 🔧 Technologies Used
@@ -208,7 +202,6 @@ sentiment_analysis_ml_part-master/
 
 ### Model Explainability
 - **LIME**: Local interpretable model explanations
-- **SHAP**: SHapley Additive exPlanations
 
 ### Data Processing
 - **pandas**: Data manipulation
@@ -245,15 +238,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🙏 Acknowledgments
 
 - [Streamlit](https://streamlit.io/) for the amazing framework
-- [Hugging Face](https://huggingface.co/) for pre-trained models
+- [Hugging Face](https://huggingface.co/) for pre-trained models and Spaces hosting
 - [spaCy](https://spacy.io/) for NLP tools
 - [FastText](https://fasttext.cc/) for word embeddings
 
 ## 📧 Contact
 
-For questions or support, please open an issue on GitHub.
+For questions or support, please open an issue on GitHub or Hugging Face.
 
 ---
 
 **Made with ❤️ using Streamlit and Python**
-
