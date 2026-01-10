@@ -1,0 +1,980 @@
+
+[     UTC     ] Logs for mayank-sentiment-analysis-ml.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[12:23:57] 🖥 Provisioning machine...
+[12:23:57] 🎛 Preparing system...
+[12:23:57] ⛓ Spinning up manager process...
+[12:23:54] 🚀 Starting up repository: 'sentiment-analysis-ml', branch: 'main', main module: 'streamlit_app.py'
+[12:23:54] 🐙 Cloning repository...
+[12:23:56] 🐙 Cloning into '/mount/src/sentiment-analysis-ml'...
+
+[12:23:56] 🐙 Cloned repository!
+[12:23:56] 🐙 Pulling code changes from Github...
+[12:23:57] 📦 Processing dependencies...
+[12:23:57] 📦 Apt dependencies were installed from /mount/src/sentiment-analysis-ml/packages.txt using apt-get.
+Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+Get:5 https://packages.microsoft.com/debian/11/prod bullseye InRelease [3650 B]
+Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [290 kB]
+Get:7 https://packages.microsoft.com/debian/11/prod bullseye/main arm64 Packages [64.1 kB]
+Get:8 https://packages.microsoft.com/debian/11/prod bullseye/main amd64 Packages [219 kB]
+Fetched 9623 kB in 1s (8101 kB/s)
+Reading package lists...[2026-01-10 12:23:59.379206] 
+Reading package lists...[2026-01-10 12:24:00.000209] 
+Building dependency tree...[2026-01-10 12:24:00.194422] 
+Reading state information...[2026-01-10 12:24:00.194735] 
+build-essential is already the newest version (12.9).
+0 upgraded, 0 newly installed, 0 to remove and 33 not upgraded.
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 120 packages in 1.53s
+  × Failed to download and build `llvmlite==0.36.0`
+  ╰─▶ Build backend failed to determine requirements with `build_wheel()`
+      (exit status: 1)
+
+      [stderr]
+      Traceback (most recent call last):
+        File "<string>", line 14, in <module>
+          requires = get_requires_for_build({})
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpuOUkUm/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 331, in get_requires_for_build_wheel
+          return self._get_build_requires(config_settings, requirements=[])
+                 ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpuOUkUm/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 301, in _get_build_requires
+          self.run_setup()
+          ~~~~~~~~~~~~~~^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpuOUkUm/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 512, in run_setup
+          super().run_setup(setup_script=setup_script)
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File
+      "/home/adminuser/.cache/uv/builds-v0/.tmpuOUkUm/lib/python3.13/site-packages/setuptools/build_meta.py",
+      line 317, in run_setup
+          exec(code, locals())
+          ~~~~^^^^^^^^^^^^^^^^
+        File "<string>", line 55, in <module>
+        File "<string>", line 52, in _guard_py_ver
+      RuntimeError: Cannot install on Python version 3.13.11; only versions
+      >=3.6,<3.10 are supported.
+
+  help: `llvmlite` was included because `shap==0.46.0` depends on
+        `numba==0.53.1` which depends on `llvmlite`
+Checking if Streamlit is installed
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.13.11 environment at /home/adminuser/venv
+Resolved 4 packages in 123ms
+Prepared 4 packages in 114ms
+Installed 4 packages in 13ms
+ + markdown-it-py==4.0.0
+ + mdurl==[2026-01-10 12:24:06.435444] 0.1.2
+ + pygments==2.19.2
+ + rich==14.2.0
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+──────────────────────────────────────── pip ───────────────────────────────────────────
+
+Using standard pip install.
+Collecting numpy>=1.21.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 2))
+  Downloading numpy-2.4.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting pandas>=1.3.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 3))
+  Downloading pandas-2.3.3-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (91 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.2/91.2 kB 5.7 MB/s eta 0:00:00[2026-01-10 12:24:08.145045] 
+Collecting scikit-learn>=1.0.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 4))
+  Downloading scikit_learn-1.8.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+Collecting scipy>=1.7.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 5))
+  Downloading scipy-1.16.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 108.4 MB/s eta 0:00:00[2026-01-10 12:24:08.485973] 
+Collecting spacy>=3.4.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading spacy-3.8.11-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (27 kB)
+Collecting fasttext>=0.9.2 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 9))
+  Downloading fasttext-0.9.3.tar.gz (73 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.4/73.4 kB 205.3 MB/s eta 0:00:00[2026-01-10 12:24:08.834744] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pyspellchecker>=0.6.3 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 10))
+  Downloading pyspellchecker-0.8.4-py3-none-any.whl.metadata (9.4 kB)
+Collecting langdetect>=1.0.9 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 11))
+  Downloading langdetect-1.0.9.tar.gz (981 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 981.5/981.5 kB 50.4 MB/s eta 0:00:00[2026-01-10 12:24:11.810166] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting transformers>=4.30.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading transformers-4.57.3-py3-none-any.whl.metadata (43 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.0/44.0 kB 194.8 MB/s eta 0:00:00[2026-01-10 12:24:14.628533] 
+Collecting torch>=2.0.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading torch-2.9.1-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (30 kB)
+Collecting sentencepiece>=0.1.99 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 16))
+  Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+Collecting streamlit>=1.25.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading streamlit-1.52.2-py3-none-any.whl.metadata (9.8 kB)
+Collecting matplotlib>=3.5.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 22))
+  Downloading matplotlib-3.10.8-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.8/52.8 kB 178.3 MB/s eta 0:00:00[2026-01-10 12:24:15.099655] 
+Collecting plotly>=5.14.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 23))
+  Downloading plotly-6.5.1-py3-none-any.whl.metadata (8.5 kB)
+Collecting wordcloud>=1.9.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 24))
+  Downloading wordcloud-1.9.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Collecting seaborn>=0.12.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 25))
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting shap>=0.42.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 28))
+  Downloading shap-0.50.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (25 kB)
+Collecting lime>=0.2.0.1 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 29))
+  Downloading lime-0.2.0.1.tar.gz (275 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 275.7/275.7 kB 202.7 MB/s eta 0:00:00[2026-01-10 12:24:15.403377] 
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting tqdm>=4.65.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 32))
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.7/57.7 kB 183.7 MB/s eta 0:00:00[2026-01-10 12:24:18.202807] 
+Collecting joblib>=1.2.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 33))
+  Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting requests>=2.28.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 34))
+  Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+Collecting python-dateutil>=2.8.2 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 37))
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2023.3 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 38))
+  Downloading pytz-2025.2-py2.py3-none-any.whl.metadata (22 kB)
+Collecting click>=8.1.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 39))
+  Downloading click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting Jinja2>=3.1.2 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 40))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting MarkupSafe>=2.1.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 41))
+  Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting Werkzeug>=2.3.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 42))
+  Downloading werkzeug-3.1.5-py3-none-any.whl.metadata (4.0 kB)
+Collecting pydantic>=2.0.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 43))
+  Downloading pydantic-2.12.5-py3-none-any.whl.metadata (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 192.4 MB/s eta 0:00:00[2026-01-10 12:24:18.893997] 
+Collecting SQLAlchemy>=2.0.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 46))
+  Downloading sqlalchemy-2.0.45-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+Collecting tzdata>=2022.7 (from pandas>=1.3.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 3))
+  Downloading tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting threadpoolctl>=3.2.0 (from scikit-learn>=1.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 4))
+  Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting spacy-legacy<3.1.0,>=3.0.11 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl.metadata (2.8 kB)
+Collecting spacy-loggers<2.0.0,>=1.0.0 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading spacy_loggers-1.0.5-py3-none-any.whl.metadata (23 kB)
+Collecting murmurhash<1.1.0,>=0.28.0 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading murmurhash-1.0.15-cp313-cp313-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (2.3 kB)
+Collecting cymem<2.1.0,>=2.0.2 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading cymem-2.0.13-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (9.7 kB)
+Collecting preshed<3.1.0,>=3.0.2 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading preshed-3.0.12-cp313-cp313-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (2.5 kB)
+Collecting thinc<8.4.0,>=8.3.4 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading thinc-8.3.10-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (15 kB)
+Collecting wasabi<1.2.0,>=0.9.1 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading wasabi-1.1.3-py3-none-any.whl.metadata (28 kB)
+Collecting srsly<3.0.0,>=2.4.3 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading srsly-2.5.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (19 kB)
+Collecting catalogue<2.1.0,>=2.0.6 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading catalogue-2.0.10-py3-none-any.whl.metadata (14 kB)
+Collecting weasel<0.5.0,>=0.4.2 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading weasel-0.4.3-py3-none-any.whl.metadata (4.6 kB)
+Collecting typer-slim<1.0.0,>=0.3.0 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading typer_slim-0.21.1-py3-none-any.whl.metadata (16 kB)
+Collecting setuptools (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting packaging>=20.0 (from spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pybind11>=2.2 (from fasttext>=0.9.2->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 9))
+  Downloading pybind11-3.0.1-py3-none-any.whl.metadata (10.0 kB)
+Collecting six (from langdetect>=1.0.9->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 11))
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting filelock (from transformers>=4.30.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading filelock-3.20.3-py3-none-any.whl.metadata (2.1 kB)
+Collecting huggingface-hub<1.0,>=0.34.0 (from transformers>=4.30.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading huggingface_hub-0.36.0-py3-none-any.whl.metadata (14 kB)
+Collecting pyyaml>=5.1 (from transformers>=4.30.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting regex!=2019.12.17 (from transformers>=4.30.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading regex-2025.11.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 192.0 MB/s eta 0:00:00[2026-01-10 12:24:21.968251] 
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers>=4.30.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting safetensors>=0.4.3 (from transformers>=4.30.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting typing-extensions>=4.10.0 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting sympy>=1.13.3 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting fsspec>=0.8.5 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading fsspec-2026.1.0-py3-none-any.whl.metadata (10 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl.metadata (7.0 kB)
+Collecting nvidia-nccl-cu12==2.27.5 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)
+Collecting nvidia-nvshmem-cu12==3.3.20 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting triton==3.5.1 (from torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading triton-3.5.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting altair!=5.4.0,!=5.4.1,<7,>=4.0 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading altair-6.0.0-py3-none-any.whl.metadata (11 kB)
+Collecting blinker<2,>=1.5.0 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting cachetools<7,>=4.0 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading cachetools-6.2.4-py3-none-any.whl.metadata (5.6 kB)
+Collecting pillow<13,>=7.1.0 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading pillow-12.1.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+Collecting protobuf<7,>=3.20 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading protobuf-6.33.3-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+Collecting pyarrow>=7.0 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading pyarrow-22.0.0-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (3.2 kB)
+Collecting tenacity<10,>=8.1.0 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading tenacity-9.1.2-py3-none-any.whl.metadata (1.2 kB)
+Collecting toml<2,>=0.10.1 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+Collecting watchdog<7,>=2.1.5 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl.metadata (44 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.3/44.3 kB 124.7 MB/s eta 0:00:00[2026-01-10 12:24:24.512871] 
+Collecting gitpython!=3.1.19,<4,>=3.0.7 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading gitpython-3.1.46-py3-none-any.whl.metadata (13 kB)
+Collecting pydeck<1,>=0.8.0b4 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading pydeck-0.9.1-py2.py3-none-any.whl.metadata (4.1 kB)
+Collecting tornado!=6.5.0,<7,>=6.0.3 (from streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+Collecting contourpy>=1.0.1 (from matplotlib>=3.5.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 22))
+  Downloading contourpy-1.3.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.5.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 22))
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.5.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 22))
+  Downloading fonttools-4.61.1-cp313-cp313-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.2/114.2 kB 150.6 MB/s eta 0:00:00[2026-01-10 12:24:25.195923] 
+Collecting kiwisolver>=1.3.1 (from matplotlib>=3.5.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 22))
+  Downloading kiwisolver-1.4.9-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.3 kB)
+Collecting pyparsing>=3 (from matplotlib>=3.5.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 22))
+  Downloading pyparsing-3.3.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting narwhals>=1.15.1 (from plotly>=5.14.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 23))
+  Downloading narwhals-2.15.0-py3-none-any.whl.metadata (13 kB)
+Collecting slicer==0.0.8 (from shap>=0.42.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 28))
+  Downloading slicer-0.0.8-py3-none-any.whl.metadata (4.0 kB)
+Collecting numba>=0.54 (from shap>=0.42.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 28))
+  Downloading numba-0.63.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.9 kB)
+Collecting cloudpickle (from shap>=0.42.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 28))
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting scikit-image>=0.12 (from lime>=0.2.0.1->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 29))
+  Downloading scikit_image-0.26.0-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (15 kB)
+Collecting charset_normalizer<4,>=2 (from requests>=2.28.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 34))
+  Downloading charset_normalizer-3.4.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB)
+Collecting idna<4,>=2.5 (from requests>=2.28.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 34))
+  Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+Collecting urllib3<3,>=1.21.1 (from requests>=2.28.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 34))
+  Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+Collecting certifi>=2017.4.17 (from requests>=2.28.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 34))
+  Downloading certifi-2026.1.4-py3-none-any.whl.metadata (2.5 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 43))
+  Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.41.5 (from pydantic>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 43))
+  Downloading pydantic_core-2.41.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+Collecting typing-inspection>=0.4.2 (from pydantic>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 43))
+  Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting greenlet>=1 (from SQLAlchemy>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 46))
+  Downloading greenlet-3.3.0-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+Collecting jsonschema>=3.0 (from altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading gitdb-4.0.12-py3-none-any.whl.metadata (1.2 kB)
+Collecting hf-xet<2.0.0,>=1.1.3 (from huggingface-hub<1.0,>=0.34.0->transformers>=4.30.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 14))
+  Downloading hf_xet-1.2.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting llvmlite<0.47,>=0.46.0dev0 (from numba>=0.54->shap>=0.42.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 28))
+  Downloading llvmlite-0.46.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.0 kB)
+Collecting numpy>=1.21.0 (from -r /mount/src/sentiment-analysis-ml/requirements.txt (line 2))
+  Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 193.1 MB/s eta 0:00:00[2026-01-10 12:24:28.848489] 
+Collecting imageio!=2.35.0,>=2.33 (from scikit-image>=0.12->lime>=0.2.0.1->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 29))
+  Downloading imageio-2.37.2-py3-none-any.whl.metadata (9.7 kB)
+Collecting tifffile>=2022.8.12 (from scikit-image>=0.12->lime>=0.2.0.1->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 29))
+  Downloading tifffile-2025.12.20-py3-none-any.whl.metadata (30 kB)
+Collecting lazy-loader>=0.4 (from scikit-image>=0.12->lime>=0.2.0.1->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 29))
+  Downloading lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch>=2.0.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 15))
+  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting blis<1.4.0,>=1.3.0 (from thinc<8.4.0,>=8.3.4->spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading blis-1.3.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (7.5 kB)
+Collecting confection<1.0.0,>=0.0.1 (from thinc<8.4.0,>=8.3.4->spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading confection-0.1.5-py3-none-any.whl.metadata (19 kB)
+Collecting cloudpathlib<1.0.0,>=0.7.0 (from weasel<0.5.0,>=0.4.2->spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading cloudpathlib-0.23.0-py3-none-any.whl.metadata (16 kB)
+Collecting smart-open<8.0.0,>=5.2.1 (from weasel<0.5.0,>=0.4.2->spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading smart_open-7.5.0-py3-none-any.whl.metadata (24 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.19,<4,>=3.0.7->streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading smmap-5.0.2-py3-none-any.whl.metadata (4.3 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=3.0->altair!=5.4.0,!=5.4.1,<7,>=4.0->streamlit>=1.25.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 19))
+  Downloading rpds_py-0.30.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting wrapt (from smart-open<8.0.0,>=5.2.1->weasel<0.5.0,>=0.4.2->spacy>=3.4.0->-r /mount/src/sentiment-analysis-ml/requirements.txt (line 8))
+  Downloading wrapt-2.0.1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (9.0 kB)
+Downloading pandas-2.3.3-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 183.9 MB/s eta 0:00:00[2026-01-10 12:24:31.494575] 
+Downloading scikit_learn-1.8.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (8.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.9/8.9 MB 166.0 MB/s eta 0:00:00[2026-01-10 12:24:31.560477] 
+Downloading scipy-1.16.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.7/35.7 MB 188.9 MB/s eta 0:00:00[2026-01-10 12:24:31.772217] 
+Downloading spacy-3.8.11-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (32.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 32.8/32.8 MB 173.3 MB/s eta 0:00:00[2026-01-10 12:24:32.010553] 
+Downloading pyspellchecker-0.8.4-py3-none-any.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 189.8 MB/s eta 0:00:00[2026-01-10 12:24:32.064289] 
+Downloading transformers-4.57.3-py3-none-any.whl (12.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 185.2 MB/s eta 0:00:00[2026-01-10 12:24:32.143991] 
+Downloading torch-2.9.1-cp313-cp313-manylinux_2_28_x86_64.whl (899.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 899.7/899.7 MB 65.1 MB/s eta 0:00:00[2026-01-10 12:24:38.073837] 
+Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 154.0 MB/s eta 0:00:00[2026-01-10 12:24:41.874296] 
+Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 165.8 MB/s eta 0:00:00[2026-01-10 12:24:41.949525] 
+Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 139.2 MB/s eta 0:00:00[2026-01-10 12:24:42.473444] 
+Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 134.1 MB/s eta 0:00:00[2026-01-10 12:24:42.494184] 
+Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 171.5 MB/s eta 0:00:00[2026-01-10 12:24:46.753174] 
+Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 195.3 MB/s eta 0:00:00[2026-01-10 12:24:47.988990] 
+Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 190.3 MB/s eta 0:00:00[2026-01-10 12:24:48.006972] 
+Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 195.1 MB/s eta 0:00:00[2026-01-10 12:24:48.360936] 
+Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 192.6 MB/s eta 0:00:00[2026-01-10 12:24:50.064734] 
+Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 133.0 MB/s eta 0:00:00[2026-01-10 12:24:52.342997] 
+Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 122.7 MB/s eta 0:00:00[2026-01-10 12:24:54.458221] 
+Downloading nvidia_nccl_cu12-2.27.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.3/322.3 MB 182.9 MB/s eta 0:00:00[2026-01-10 12:24:56.543285] 
+Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 111.0 MB/s eta 0:00:00[2026-01-10 12:24:56.887675] 
+Downloading nvidia_nvshmem_cu12-3.3.20-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (124.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 124.7/124.7 MB 167.5 MB/s eta 0:00:00[2026-01-10 12:24:57.860398] 
+Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.0/90.0 kB 128.4 MB/s eta 0:00:00[2026-01-10 12:24:57.874287] 
+Downloading triton-3.5.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (170.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 170.5/170.5 MB 75.3 MB/s eta 0:00:00[2026-01-10 12:24:59.293830] 
+Downloading sentencepiece-0.2.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 78.6 MB/s eta 0:00:00[2026-01-10 12:24:59.326710] 
+Downloading streamlit-1.52.2-py3-none-any.whl (9.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.0/9.0 MB 79.2 MB/s eta 0:00:00[2026-01-10 12:24:59.454790] 
+Downloading matplotlib-3.10.8-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.7/8.7 MB 79.6 MB/s eta 0:00:00[2026-01-10 12:24:59.577700] 
+Downloading plotly-6.5.1-py3-none-any.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 76.5 MB/s eta 0:00:00[2026-01-10 12:24:59.720344] 
+Downloading wordcloud-1.9.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (551 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 551.8/551.8 kB 151.2 MB/s eta 0:00:00[2026-01-10 12:24:59.737687] 
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 162.1 MB/s eta 0:00:00[2026-01-10 12:24:59.750734] 
+Downloading shap-0.50.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 88.7 MB/s eta 0:00:00[2026-01-10 12:24:59.775530] 
+Downloading slicer-0.0.8-py3-none-any.whl (15 kB)
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 94.2 MB/s eta 0:00:00[2026-01-10 12:24:59.797608] 
+Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 111.9 MB/s eta 0:00:00[2026-01-10 12:24:59.814734] 
+Downloading requests-2.32.5-py3-none-any.whl (64 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 131.5 MB/s eta 0:00:00[2026-01-10 12:24:59.827539] 
+Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 207.7 MB/s eta 0:00:00[2026-01-10 12:24:59.841170] 
+Downloading pytz-2025.2-py2.py3-none-any.whl (509 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 509.2/509.2 kB 139.1 MB/s eta 0:00:00[2026-01-10 12:24:59.857107] 
+Downloading click-8.3.1-py3-none-any.whl (108 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 108.3/108.3 kB 143.2 MB/s eta 0:00:00[2026-01-10 12:24:59.870427] 
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 127.6 MB/s eta 0:00:00[2026-01-10 12:24:59.883822] 
+Downloading markupsafe-3.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading werkzeug-3.1.5-py3-none-any.whl (225 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 225.0/225.0 kB 171.6 MB/s eta 0:00:00[2026-01-10 12:24:59.907785] 
+Downloading pydantic-2.12.5-py3-none-any.whl (463 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 463.6/463.6 kB 152.4 MB/s eta 0:00:00[2026-01-10 12:24:59.923422] 
+Downloading pydantic_core-2.41.5-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 84.7 MB/s eta 0:00:00[2026-01-10 12:24:59.961052] 
+Downloading sqlalchemy-2.0.45-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 82.1 MB/s eta 0:00:00[2026-01-10 12:25:00.013395] 
+Downloading altair-6.0.0-py3-none-any.whl (795 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 795.4/795.4 kB 86.2 MB/s eta 0:00:00[2026-01-10 12:25:00.034183] 
+Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading cachetools-6.2.4-py3-none-any.whl (11 kB)
+Downloading catalogue-2.0.10-py3-none-any.whl (17 kB)
+Downloading certifi-2026.1.4-py3-none-any.whl (152 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 152.9/152.9 kB 132.7 MB/s eta 0:00:00[2026-01-10 12:25:00.086131] 
+Downloading charset_normalizer-3.4.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (153 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 153.1/153.1 kB 128.6 MB/s eta 0:00:00[2026-01-10 12:25:00.100423] 
+Downloading contourpy-1.3.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 362.9/362.9 kB 121.3 MB/s eta 0:00:00[2026-01-10 12:25:00.116568] 
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading cymem-2.0.13-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (254 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 254.6/254.6 kB 121.5 MB/s eta 0:00:00[2026-01-10 12:25:00.144816] 
+Downloading fonttools-4.61.1-cp313-cp313-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (4.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.9/4.9 MB 81.3 MB/s eta 0:00:00[2026-01-10 12:25:00.218933] 
+Downloading fsspec-2026.1.0-py3-none-any.whl (201 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 201.8/201.8 kB 205.6 MB/s eta 0:00:00[2026-01-10 12:25:00.232257] 
+Downloading gitpython-3.1.46-py3-none-any.whl (208 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.6/208.6 kB 173.5 MB/s eta 0:00:00[2026-01-10 12:25:00.245887] 
+Downloading greenlet-3.3.0-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (612 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 612.8/612.8 kB 82.3 MB/s eta 0:00:00[2026-01-10 12:25:00.265691] 
+Downloading huggingface_hub-0.36.0-py3-none-any.whl (566 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 566.1/566.1 kB 135.6 MB/s eta 0:00:00[2026-01-10 12:25:00.282682] 
+Downloading idna-3.11-py3-none-any.whl (71 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 132.2 MB/s eta 0:00:00[2026-01-10 12:25:00.296258] 
+Downloading kiwisolver-1.4.9-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 85.7 MB/s eta 0:00:00[2026-01-10 12:25:00.327179] 
+Downloading murmurhash-1.0.15-cp313-cp313-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (133 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 187.1 MB/s eta 0:00:00[2026-01-10 12:25:00.341379] 
+Downloading narwhals-2.15.0-py3-none-any.whl (432 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 432.9/432.9 kB 147.4 MB/s eta 0:00:00[2026-01-10 12:25:00.356961] 
+Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 89.0 MB/s eta 0:00:00[2026-01-10 12:25:00.393074] 
+Downloading numba-0.63.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 88.3 MB/s eta 0:00:00[2026-01-10 12:25:00.450064] 
+Downloading numpy-2.3.5-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 86.5 MB/s eta 0:00:00[2026-01-10 12:25:00.656825] 
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 191.7 MB/s eta 0:00:00[2026-01-10 12:25:00.668574] 
+Downloading pillow-12.1.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 89.4 MB/s eta 0:00:00[2026-01-10 12:25:00.759904] 
+Downloading preshed-3.0.12-cp313-cp313-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (835 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 835.9/835.9 kB 96.5 MB/s eta 0:00:00[2026-01-10 12:25:00.782406] 
+Downloading protobuf-6.33.3-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.3/323.3 kB 145.6 MB/s eta 0:00:00[2026-01-10 12:25:00.796578] 
+Downloading pyarrow-22.0.0-cp313-cp313-manylinux_2_28_x86_64.whl (47.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.7/47.7 MB 95.5 MB/s eta 0:00:00[2026-01-10 12:25:01.330695] 
+Downloading pybind11-3.0.1-py3-none-any.whl (293 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 293.6/293.6 kB 197.1 MB/s eta 0:00:00[2026-01-10 12:25:01.349373] 
+Downloading pydeck-0.9.1-py2.py3-none-any.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 97.7 MB/s eta 0:00:00[2026-01-10 12:25:01.432442] 
+Downloading pyparsing-3.3.1-py3-none-any.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.8/121.8 kB 222.9 MB/s eta 0:00:00[2026-01-10 12:25:01.444343] 
+Downloading pyyaml-6.0.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.6/801.6 kB 103.6 MB/s eta 0:00:00[2026-01-10 12:25:01.463942] 
+Downloading regex-2025.11.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (803 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 803.5/803.5 kB 100.8 MB/s eta 0:00:00[2026-01-10 12:25:01.486905] 
+Downloading safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (507 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 507.2/507.2 kB 183.7 MB/s eta 0:00:00[2026-01-10 12:25:01.501061] 
+Downloading scikit_image-0.26.0-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (13.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.7/13.7 MB 96.3 MB/s eta 0:00:00[2026-01-10 12:25:01.656300] 
+Downloading setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 84.5 MB/s eta 0:00:00[2026-01-10 12:25:01.683239] 
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading spacy_legacy-3.0.12-py2.py3-none-any.whl (29 kB)
+Downloading spacy_loggers-1.0.5-py3-none-any.whl (22 kB)
+Downloading srsly-2.5.2-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 107.9 MB/s eta 0:00:00[2026-01-10 12:25:01.738436] 
+Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 96.5 MB/s eta 0:00:00[2026-01-10 12:25:01.815974] 
+Downloading tenacity-9.1.2-py3-none-any.whl (28 kB)
+Downloading thinc-8.3.10-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 99.2 MB/s eta 0:00:00[2026-01-10 12:25:01.882414] 
+Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 99.1 MB/s eta 0:00:00[2026-01-10 12:25:01.939469] 
+Downloading toml-0.10.2-py2.py3-none-any.whl (16 kB)
+Downloading tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (445 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 445.3/445.3 kB 175.6 MB/s eta 0:00:00[2026-01-10 12:25:01.965331] 
+Downloading typer_slim-0.21.1-py3-none-any.whl (47 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.4/47.4 kB 194.4 MB/s eta 0:00:00[2026-01-10 12:25:01.977279] 
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 180.7 MB/s eta 0:00:00[2026-01-10 12:25:01.988869] 
+Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+Downloading tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.5/348.5 kB 176.1 MB/s eta 0:00:00[2026-01-10 12:25:02.012417] 
+Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.6/131.6 kB 114.8 MB/s eta 0:00:00[2026-01-10 12:25:02.025818] 
+Downloading wasabi-1.1.3-py3-none-any.whl (27 kB)
+Downloading watchdog-6.0.0-py3-none-manylinux2014_x86_64.whl (79 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.1/79.1 kB 153.9 MB/s eta 0:00:00[2026-01-10 12:25:02.048104] 
+Downloading weasel-0.4.3-py3-none-any.whl (50 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.8/50.8 kB 189.2 MB/s eta 0:00:00[2026-01-10 12:25:02.060170] 
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading filelock-3.20.3-py3-none-any.whl (16 kB)
+Downloading blis-1.3.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (11.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.4/11.4 MB 100.5 MB/s eta 0:00:00[2026-01-10 12:25:02.207270] 
+Downloading cloudpathlib-0.23.0-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 201.6 MB/s eta 0:00:00[2026-01-10 12:25:02.219731] 
+Downloading confection-0.1.5-py3-none-any.whl (35 kB)
+Downloading gitdb-4.0.12-py3-none-any.whl (62 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 135.0 MB/s eta 0:00:00[2026-01-10 12:25:02.242637] 
+Downloading hf_xet-1.2.0-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 105.1 MB/s eta 0:00:00[2026-01-10 12:25:02.287116] 
+Downloading imageio-2.37.2-py3-none-any.whl (317 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.6/317.6 kB 192.6 MB/s eta 0:00:00[2026-01-10 12:25:02.300433] 
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 204.7 MB/s eta 0:00:00[2026-01-10 12:25:02.312933] 
+Downloading lazy_loader-0.4-py3-none-any.whl (12 kB)
+Downloading llvmlite-0.46.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 102.7 MB/s eta 0:00:00[2026-01-10 12:25:02.876073] 
+Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 135.7 MB/s eta 0:00:00[2026-01-10 12:25:02.892563] 
+Downloading smart_open-7.5.0-py3-none-any.whl (63 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.9/63.9 kB 150.1 MB/s eta 0:00:00[2026-01-10 12:25:02.904507] 
+Downloading tifffile-2025.12.20-py3-none-any.whl (232 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 232.0/232.0 kB 201.0 MB/s eta 0:00:00[2026-01-10 12:25:02.918840] 
+Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.6/67.6 kB 189.7 MB/s eta 0:00:00[2026-01-10 12:25:02.931460] 
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rpds_py-0.30.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (394 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 394.0/394.0 kB 205.0 MB/s eta 0:00:00[2026-01-10 12:25:02.965183] 
+Downloading smmap-5.0.2-py3-none-any.whl (24 kB)
+Downloading wrapt-2.0.1-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (121 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.5/121.5 kB 151.1 MB/s eta 0:00:00[2026-01-10 12:25:02.986960] 
+Building wheels for collected packages: fasttext, langdetect, lime
+  Building wheel for fasttext (pyproject.toml): started
+  Building wheel for fasttext (pyproject.toml): finished with status 'done'
+  Created wheel for fasttext: filename=fasttext-0.9.3-cp313-cp313-linux_x86_64.whl size=4868209 sha256=af0c0bd344e87e1ab248b296bc99d2b4cac09cb0e932c98669afca9348b88b18
+  Stored in directory: /tmp/pip-ephem-wheel-cache-yfgwzkh3/wheels/59/06/3f/c95dbba0df6e58ba6ed18220c1aea1e96042802139df3674ef
+  Building wheel for langdetect (pyproject.toml): started
+  Building wheel for langdetect (pyproject.toml): finished with status 'done'
+  Created wheel for langdetect: filename=langdetect-1.0.9-py3-none-any.whl size=993332 sha256=6e430dcc5f6a10d435e37020e81825eb1349755553bf1f19d931c1d99e8cff46
+  Stored in directory: /tmp/pip-ephem-wheel-cache-yfgwzkh3/wheels/eb/87/25/2dddf1c94e1786054e25022ec5530bfed52bad86d882999c48
+  Building wheel for lime (pyproject.toml): started
+  Building wheel for lime (pyproject.toml): finished with status 'done'
+  Created wheel for lime: filename=lime-0.2.0.1-py3-none-any.whl size=283913 sha256=33233e12b91b77ab544320654bf5bbc18ff470b16e2b8df7cb72240a3d963069
+  Stored in directory: /tmp/pip-ephem-wheel-cache-yfgwzkh3/wheels/7c/04/5c/157dc9106512a6c7a30653ec064490c94a49e0fc8f63d19ab9
+Successfully built fasttext langdetect lime
+Installing collected packages: pytz, nvidia-cusparselt-cu12, mpmath, wrapt, watchdog, wasabi, urllib3, tzdata, typing-extensions, triton, tqdm, tornado, toml, threadpoolctl, tenacity, sympy, spacy-loggers, spacy-legacy, smmap, slicer, six, setuptools, sentencepiece, safetensors, rpds-py, regex, pyyaml, pyspellchecker, pyparsing, pybind11, pyarrow, protobuf, pillow, packaging, nvidia-nvtx-cu12, nvidia-nvshmem-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, narwhals, murmurhash, MarkupSafe, llvmlite, kiwisolver, joblib, idna, hf-xet, greenlet, fsspec, fonttools, filelock, cymem, cycler, cloudpickle, cloudpathlib, click, charset_normalizer, certifi, catalogue, cachetools, blinker, attrs, annotated-types, Werkzeug, typing-inspection, typer-slim, tifffile, srsly, SQLAlchemy, smart-open, scipy, requests, referencing, python-dateutil, pydantic-core, preshed, plotly, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, numba, lazy-loader, langdetect, Jinja2, imageio, gitdb, fasttext, contourpy, blis, scikit-learn, scikit-image, pydeck, pydantic, pandas, nvidia-cusolver-cu12, matplotlib, jsonschema-specifications, huggingface-hub, gitpython, wordcloud, torch, tokenizers, shap, seaborn, lime, jsonschema, confection, weasel, transformers, thinc, altair, streamlit, spacy
+Successfully installed Jinja2-3.1.6 MarkupSafe-3.0.3 SQLAlchemy-2.0.45 Werkzeug-3.1.5 altair-6.0.0 annotated-types-0.7.0 attrs-25.4.0 blinker-1.9.0 blis-1.3.3 cachetools-6.2.4 catalogue-2.0.10 certifi-2026.1.4 charset_normalizer-3.4.4 click-8.3.1 cloudpathlib-0.23.0 cloudpickle-3.1.2 confection-0.1.5 contourpy-1.3.3 cycler-0.12.1 cymem-2.0.13 fasttext-0.9.3 filelock-3.20.3 fonttools-4.61.1 fsspec-2026.1.0 gitdb-4.0.12 gitpython-3.1.46 greenlet-3.3.0 hf-xet-1.2.0 huggingface-hub-0.36.0 idna-3.11 imageio-2.37.2 joblib-1.5.3 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kiwisolver-1.4.9 langdetect-1.0.9 lazy-loader-0.4 lime-0.2.0.1 llvmlite-0.46.0 matplotlib-3.10.8 mpmath-1.3.0 murmurhash-1.0.15 narwhals-2.15.0 networkx-3.6.1 numba-0.63.1 numpy-2.3.5 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.5 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvshmem-cu12-3.3.20 nvidia-nvtx-cu12-12.8.90 packaging-25.0 pandas-2.3.3 pillow-12.1.0 plotly-6.5.1 preshed-3.0.12 protobuf-6.33.3 pyarrow-22.0.0 pybind11-3.0.1 pydantic-2.12.5 pydantic-core-2.41.5 pydeck-0.9.1 pyparsing-3.3.1 pyspellchecker-0.8.4 python-dateutil-2.9.0.post0 pytz-2025.2 pyyaml-6.0.3 referencing-0.37.0 regex-2025.11.3 requests-2.32.5 rpds-py-0.30.0 safetensors-0.7.0 scikit-image-0.26.0 scikit-learn-1.8.0 scipy-1.16.3 seaborn-0.13.2 sentencepiece-0.2.1 setuptools-80.9.0 shap-0.50.0 six-1.17.0 slicer-0.0.8 smart-open-7.5.0 smmap-5.0.2 spacy-3.8.11 spacy-legacy-3.0.12 spacy-loggers-1.0.5 srsly-2.5.2 streamlit-1.52.2 sympy-1.14.0 tenacity-9.1.2 thinc-8.3.10 threadpoolctl-3.6.0 tifffile-2025.12.20 tokenizers-0.22.2 toml-0.10.2 torch-2.9.1 tornado-6.5.4 tqdm-4.67.1 transformers-4.57.3 triton-3.5.1 typer-slim-0.21.1 typing-extensions-4.15.0 typing-inspection-0.4.2 tzdata-2025.3 urllib3-2.6.3 wasabi-1.1.3 watchdog-6.0.0 weasel-0.4.3 wordcloud-1.9.5 wrapt-2.0.1
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+Checking if Streamlit is installed
+Found Streamlit version 1.52.2 in the environment
+Installing rich for an improved exception logging
+Using standard pip install.
+Collecting rich>=10.14.0
+  Downloading rich-14.2.0-py3-none-any.whl.metadata (18 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=10.14.0)
+  Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=10.14.0)
+  Downloading pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=10.14.0)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading rich-14.2.0-py3-none-any.whl (243 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.4/243.4 kB 14.2 MB/s eta 0:00:00[2026-01-10 12:28:30.220692] 
+Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.3/87.3 kB 158.6 MB/s eta 0:00:00[2026-01-10 12:28:30.233436] 
+Downloading pygments-2.19.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 76.4 MB/s eta 0:00:00[2026-01-10 12:28:30.261275] 
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Installing collected packages: pygments, mdurl, markdown-it-py, rich
+  Attempting uninstall: pygments
+    Found existing installation: Pygments 2.19.2
+    Uninstalling Pygments-2.19.2:
+      Successfully uninstalled Pygments-2.19.2
+  Attempting uninstall: mdurl
+    Found existing installation: mdurl 0.1.2
+    Uninstalling mdurl-0.1.2:
+      Successfully uninstalled mdurl-0.1.2
+  Attempting uninstall: markdown-it-py
+    Found existing installation: markdown-it-py 4.0.0
+    Uninstalling markdown-it-py-4.0.0:
+      Successfully uninstalled markdown-it-py-4.0.0
+  Attempting uninstall: rich
+    Found existing installation: rich 14.2.0
+    Uninstalling rich-14.2.0:
+      Successfully uninstalled rich-14.2.0
+Successfully installed markdown-it-py-4.0.0 mdurl-0.1.2 pygments-2.19.2 rich-14.2.0
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: pip install --upgrade pip
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[12:28:34] 🐍 Python dependencies were installed from /mount/src/sentiment-analysis-ml/requirements.txt using pip.
+Check if streamlit is installed
+Streamlit is already installed
+[12:28:35] 📦 Processed dependencies!
+
+
+
+2026-01-10 12:29:58.034 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-10 12:30:00.481 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:671 in code_to_exec                                     
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:751 in <module>             
+                                                                                
+    748                                                                         
+    749                                                                         
+    750 if __name__ == "__main__":                                              
+  ❱ 751 │   main()                                                              
+    752                                                                         
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:134 in main                 
+                                                                                
+    131 │   │   render_single_review_analysis(model_type, show_explainability,  
+    132 │                                                                       
+    133 │   elif analysis_mode == "Batch CSV Upload":                           
+  ❱ 134 │   │   render_batch_analysis(model_type, show_wordcloud)               
+    135 │                                                                       
+    136 │   elif analysis_mode == "Model Comparison":                           
+    137 │   │   render_model_comparison()                                       
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:503 in                      
+  render_batch_analysis                                                         
+                                                                                
+    500 │   │   # Analyze button                                                
+    501 │   │   if st.button("🚀 Analyze All Reviews", type="primary"):         
+    502 │   │   │   # Pass a copy to prevent modifying the session state DataF  
+  ❱ 503 │   │   │   analyze_batch_reviews(df_to_analyze.copy(), model_type, sh  
+    504 │   │                                                                   
+    505 │   │   # Display results if they exist in session state (persists acr  
+    506 │   │   elif 'batch_analysis_results' in st.session_state and st.sessi  
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:516 in                      
+  analyze_batch_reviews                                                         
+                                                                                
+    513 def analyze_batch_reviews(df, model_type, show_wordcloud):              
+    514 │   """Analyze batch of reviews"""                                      
+    515 │   # Initialize analyzer                                               
+  ❱ 516 │   analyzer = initialize_analyzer(model_type)                          
+    517 │                                                                       
+    518 │   # Progress tracking                                                 
+    519 │   progress_bar = st.progress(0)                                       
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:81 in initialize_analyzer   
+                                                                                
+     78 │   """Initialize analyzer with loading indicator"""                    
+     79 │   if st.session_state.analyzer is None or st.session_state.get('curr  
+     80 │   │   with st.spinner(f"🚀 Loading {model_type} model... This may ta  
+  ❱  81 │   │   │   st.session_state.analyzer = get_analyzer(model_type)        
+     82 │   │   │   st.session_state.current_model = model_type                 
+     83 │   │   st.success("✅ Model loaded successfully!")                     
+     84 │   return st.session_state.analyzer                                    
+                                                                                
+  /mount/src/sentiment-analysis-ml/analyzer.py:389 in get_analyzer              
+                                                                                
+    386 │   """Get or create sentiment analyzer instance"""                     
+    387 │   global _default_analyzer                                            
+    388 │   if _default_analyzer is None or _default_analyzer.model_type != mo  
+  ❱ 389 │   │   _default_analyzer = SentimentAnalyzer(model_type=model_type)    
+    390 │   return _default_analyzer                                            
+    391                                                                         
+    392                                                                         
+                                                                                
+  /mount/src/sentiment-analysis-ml/analyzer.py:70 in __init__                   
+                                                                                
+     67 │   │   self.model_type = model_type                                    
+     68 │   │                                                                   
+     69 │   │   # Load Spacy                                                    
+  ❱  70 │   │   self.nlp = spacy.load('en_core_web_sm')                         
+     71 │   │   sentencizer = Sentencizer(punct_chars=[".", "!", "?", "\n", "\  
+     72 │   │   if 'sentencizer' not in self.nlp.pipe_names:                    
+     73 │   │   │   self.nlp.add_pipe('sentencizer', last=True)                 
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/spacy/__init__.py:52 in     
+  load                                                                          
+                                                                                
+    49 │   │   keyed by section values in dot notation.                         
+    50 │   RETURNS (Language): The loaded nlp object.                           
+    51 │   """                                                                  
+  ❱ 52 │   return util.load_model(                                              
+    53 │   │   name,                                                            
+    54 │   │   vocab=vocab,                                                     
+    55 │   │   disable=disable,                                                 
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/spacy/util.py:531 in        
+  load_model                                                                    
+                                                                                
+     528 │   │   return load_model_from_path(name, **kwargs)  # type: ignore[a  
+     529 │   if name in OLD_MODEL_SHORTCUTS:                                    
+     530 │   │   raise IOError(Errors.E941.format(name=name, full=OLD_MODEL_SH  
+  ❱  531 │   raise IOError(Errors.E050.format(name=name))                       
+     532                                                                        
+     533                                                                        
+     534 def load_model_from_package(                                           
+────────────────────────────────────────────────────────────────────────────────
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a 
+Python package or a valid path to a data directory.
+2026-01-10 12:30:09.411 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:671 in code_to_exec                                     
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:751 in <module>             
+                                                                                
+    748                                                                         
+    749                                                                         
+    750 if __name__ == "__main__":                                              
+  ❱ 751 │   main()                                                              
+    752                                                                         
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:134 in main                 
+                                                                                
+    131 │   │   render_single_review_analysis(model_type, show_explainability,  
+    132 │                                                                       
+    133 │   elif analysis_mode == "Batch CSV Upload":                           
+  ❱ 134 │   │   render_batch_analysis(model_type, show_wordcloud)               
+    135 │                                                                       
+    136 │   elif analysis_mode == "Model Comparison":                           
+    137 │   │   render_model_comparison()                                       
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:503 in                      
+  render_batch_analysis                                                         
+                                                                                
+    500 │   │   # Analyze button                                                
+    501 │   │   if st.button("🚀 Analyze All Reviews", type="primary"):         
+    502 │   │   │   # Pass a copy to prevent modifying the session state DataF  
+  ❱ 503 │   │   │   analyze_batch_reviews(df_to_analyze.copy(), model_type, sh  
+    504 │   │                                                                   
+    505 │   │   # Display results if they exist in session state (persists acr  
+    506 │   │   elif 'batch_analysis_results' in st.session_state and st.sessi  
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:516 in                      
+  analyze_batch_reviews                                                         
+                                                                                
+    513 def analyze_batch_reviews(df, model_type, show_wordcloud):              
+    514 │   """Analyze batch of reviews"""                                      
+    515 │   # Initialize analyzer                                               
+  ❱ 516 │   analyzer = initialize_analyzer(model_type)                          
+    517 │                                                                       
+    518 │   # Progress tracking                                                 
+    519 │   progress_bar = st.progress(0)                                       
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:81 in initialize_analyzer   
+                                                                                
+     78 │   """Initialize analyzer with loading indicator"""                    
+     79 │   if st.session_state.analyzer is None or st.session_state.get('curr  
+     80 │   │   with st.spinner(f"🚀 Loading {model_type} model... This may ta  
+  ❱  81 │   │   │   st.session_state.analyzer = get_analyzer(model_type)        
+     82 │   │   │   st.session_state.current_model = model_type                 
+     83 │   │   st.success("✅ Model loaded successfully!")                     
+     84 │   return st.session_state.analyzer                                    
+                                                                                
+  /mount/src/sentiment-analysis-ml/analyzer.py:389 in get_analyzer              
+                                                                                
+    386 │   """Get or create sentiment analyzer instance"""                     
+    387 │   global _default_analyzer                                            
+    388 │   if _default_analyzer is None or _default_analyzer.model_type != mo  
+  ❱ 389 │   │   _default_analyzer = SentimentAnalyzer(model_type=model_type)    
+    390 │   return _default_analyzer                                            
+    391                                                                         
+    392                                                                         
+                                                                                
+  /mount/src/sentiment-analysis-ml/analyzer.py:70 in __init__                   
+                                                                                
+     67 │   │   self.model_type = model_type                                    
+     68 │   │                                                                   
+     69 │   │   # Load Spacy                                                    
+  ❱  70 │   │   self.nlp = spacy.load('en_core_web_sm')                         
+     71 │   │   sentencizer = Sentencizer(punct_chars=[".", "!", "?", "\n", "\  
+     72 │   │   if 'sentencizer' not in self.nlp.pipe_names:                    
+     73 │   │   │   self.nlp.add_pipe('sentencizer', last=True)                 
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/spacy/__init__.py:52 in     
+  load                                                                          
+                                                                                
+    49 │   │   keyed by section values in dot notation.                         
+    50 │   RETURNS (Language): The loaded nlp object.                           
+    51 │   """                                                                  
+  ❱ 52 │   return util.load_model(                                              
+    53 │   │   name,                                                            
+    54 │   │   vocab=vocab,                                                     
+    55 │   │   disable=disable,                                                 
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/spacy/util.py:531 in        
+  load_model                                                                    
+                                                                                
+     528 │   │   return load_model_from_path(name, **kwargs)  # type: ignore[a  
+     529 │   if name in OLD_MODEL_SHORTCUTS:                                    
+     530 │   │   raise IOError(Errors.E941.format(name=name, full=OLD_MODEL_SH  
+  ❱  531 │   raise IOError(Errors.E050.format(name=name))                       
+     532                                                                        
+     533                                                                        
+     534 def load_model_from_package(                                           
+────────────────────────────────────────────────────────────────────────────────
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a 
+Python package or a valid path to a data directory.
+2026-01-10 12:30:22.946 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-10 12:30:27.612 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-10 12:30:32.071 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+2026-01-10 12:30:34.153 Please replace `use_container_width` with `width`.
+
+`use_container_width` will be removed after 2025-12-31.
+
+For `use_container_width=True`, use `width='stretch'`. For `use_container_width=False`, use `width='content'`.
+────────────────────── Traceback (most recent call last) ───────────────────────
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/exec_code.py:129 in exec_func_with_error_handling                        
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+  nner/script_runner.py:671 in code_to_exec                                     
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:751 in <module>             
+                                                                                
+    748                                                                         
+    749                                                                         
+    750 if __name__ == "__main__":                                              
+  ❱ 751 │   main()                                                              
+    752                                                                         
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:134 in main                 
+                                                                                
+    131 │   │   render_single_review_analysis(model_type, show_explainability,  
+    132 │                                                                       
+    133 │   elif analysis_mode == "Batch CSV Upload":                           
+  ❱ 134 │   │   render_batch_analysis(model_type, show_wordcloud)               
+    135 │                                                                       
+    136 │   elif analysis_mode == "Model Comparison":                           
+    137 │   │   render_model_comparison()                                       
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:503 in                      
+  render_batch_analysis                                                         
+                                                                                
+    500 │   │   # Analyze button                                                
+    501 │   │   if st.button("🚀 Analyze All Reviews", type="primary"):         
+    502 │   │   │   # Pass a copy to prevent modifying the session state DataF  
+  ❱ 503 │   │   │   analyze_batch_reviews(df_to_analyze.copy(), model_type, sh  
+    504 │   │                                                                   
+    505 │   │   # Display results if they exist in session state (persists acr  
+    506 │   │   elif 'batch_analysis_results' in st.session_state and st.sessi  
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:516 in                      
+  analyze_batch_reviews                                                         
+                                                                                
+    513 def analyze_batch_reviews(df, model_type, show_wordcloud):              
+    514 │   """Analyze batch of reviews"""                                      
+    515 │   # Initialize analyzer                                               
+  ❱ 516 │   analyzer = initialize_analyzer(model_type)                          
+    517 │                                                                       
+    518 │   # Progress tracking                                                 
+    519 │   progress_bar = st.progress(0)                                       
+                                                                                
+  /mount/src/sentiment-analysis-ml/streamlit_app.py:81 in initialize_analyzer   
+                                                                                
+     78 │   """Initialize analyzer with loading indicator"""                    
+     79 │   if st.session_state.analyzer is None or st.session_state.get('curr  
+     80 │   │   with st.spinner(f"🚀 Loading {model_type} model... This may ta  
+  ❱  81 │   │   │   st.session_state.analyzer = get_analyzer(model_type)        
+     82 │   │   │   st.session_state.current_model = model_type                 
+     83 │   │   st.success("✅ Model loaded successfully!")                     
+     84 │   return st.session_state.analyzer                                    
+                                                                                
+  /mount/src/sentiment-analysis-ml/analyzer.py:389 in get_analyzer              
+                                                                                
+    386 │   """Get or create sentiment analyzer instance"""                     
+    387 │   global _default_analyzer                                            
+    388 │   if _default_analyzer is None or _default_analyzer.model_type != mo  
+  ❱ 389 │   │   _default_analyzer = SentimentAnalyzer(model_type=model_type)    
+    390 │   return _default_analyzer                                            
+    391                                                                         
+    392                                                                         
+                                                                                
+  /mount/src/sentiment-analysis-ml/analyzer.py:70 in __init__                   
+                                                                                
+     67 │   │   self.model_type = model_type                                    
+     68 │   │                                                                   
+     69 │   │   # Load Spacy                                                    
+  ❱  70 │   │   self.nlp = spacy.load('en_core_web_sm')                         
+     71 │   │   sentencizer = Sentencizer(punct_chars=[".", "!", "?", "\n", "\  
+     72 │   │   if 'sentencizer' not in self.nlp.pipe_names:                    
+     73 │   │   │   self.nlp.add_pipe('sentencizer', last=True)                 
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/spacy/__init__.py:52 in     
+  load                                                                          
+                                                                                
+    49 │   │   keyed by section values in dot notation.                         
+    50 │   RETURNS (Language): The loaded nlp object.                           
+    51 │   """                                                                  
+  ❱ 52 │   return util.load_model(                                              
+    53 │   │   name,                                                            
+    54 │   │   vocab=vocab,                                                     
+    55 │   │   disable=disable,                                                 
+                                                                                
+  /home/adminuser/venv/lib/python3.13/site-packages/spacy/util.py:531 in        
+  load_model                                                                    
+                                                                                
+     528 │   │   return load_model_from_path(name, **kwargs)  # type: ignore[a  
+     529 │   if name in OLD_MODEL_SHORTCUTS:                                    
+     530 │   │   raise IOError(Errors.E941.format(name=name, full=OLD_MODEL_SH  
+  ❱  531 │   raise IOError(Errors.E050.format(name=name))                       
+     532                                                                        
+     533                                                                        
+     534 def load_model_from_package(                                           
+────────────────────────────────────────────────────────────────────────────────
+OSError: [E050] Can't find model 'en_core_web_sm'. It doesn't seem to be a 
+Python package or a valid path to a data directory.

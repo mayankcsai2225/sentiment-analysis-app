@@ -66,8 +66,16 @@ class SentimentAnalyzer:
         """
         self.model_type = model_type
         
-        # Load Spacy
-        self.nlp = spacy.load('en_core_web_sm')
+        # Load Spacy - download model if not found
+        try:
+            self.nlp = spacy.load('en_core_web_sm')
+        except OSError:
+            # Model not found, download it
+            import subprocess
+            import sys
+            print("📦 spaCy model 'en_core_web_sm' not found. Downloading...")
+            subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+            self.nlp = spacy.load('en_core_web_sm')
         sentencizer = Sentencizer(punct_chars=[".", "!", "?", "\n", "\r", ";"])
         if 'sentencizer' not in self.nlp.pipe_names:
             self.nlp.add_pipe('sentencizer', last=True)

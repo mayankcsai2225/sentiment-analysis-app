@@ -25,7 +25,9 @@ wordcloud>=1.9.0
 seaborn>=0.12.0
 
 # Model Explainability
-shap>=0.42.0
+# Note: SHAP is optional and may have compatibility issues with Python 3.13+
+# It's wrapped in try/except in the code, so the app will work without it
+# shap>=0.42.0  # Commented out due to Python 3.13 compatibility issues
 lime>=0.2.0.1
 
 # Data Processing
@@ -45,6 +47,5 @@ pydantic>=2.0.0
 # Storage
 SQLAlchemy>=2.0.0
 
-# Note: spaCy model (en_core_web_sm) needs to be downloaded separately:
-# python -m spacy download en_core_web_sm
-# For Streamlit Cloud, this is handled automatically via setup.sh
+# Note: spaCy model (en_core_web_sm) will be downloaded automatically
+# by the application if not found (handled in analyzer.py)
