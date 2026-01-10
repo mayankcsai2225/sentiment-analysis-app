@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: sentiment-analysis
+    env: python
+    buildCommand: pip install -r requirements-deploy.txt && python -m spacy download en_core_web_sm
+    startCommand: streamlit run streamlit_app.py --server.port=$PORT --server.address=0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: APP_ENV
+        value: production
+

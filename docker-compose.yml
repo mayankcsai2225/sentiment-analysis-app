@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  streamlit-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentiment-analysis-streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - APP_ENV=production
+      - ENABLE_CACHING=True
+    volumes:
+      - ./models:/app/models
+      - ./csv_files:/app/csv_files
+      - ./feedback.db:/app/feedback.db
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  fastapi-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentiment-analysis-api
+    command: ["python", "api.py"]
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+    volumes:
+      - ./models:/app/models
+      - ./csv_files:/app/csv_files
+    restart: unless-stopped
+    depends_on:
+      - streamlit-app
+
+networks:
+  default:
+    name: sentiment-analysis-network
