@@ -11,7 +11,7 @@ license: mit
 ---
 
 # 🎯 Product Review Sentiment Analysis
-
+LIVE : https://huggingface.co/spaces/Mayankojhaa/sentiment-analysis-app
 An advanced ML-powered sentiment analysis application that analyzes product reviews using multiple machine learning models. Built with Streamlit, featuring rich visualizations, batch processing, and model explainability.
 
 ![Python](https://img.shields.io/badge/python-3.11-blue.svg)
@@ -243,7 +243,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [FastText](https://fasttext.cc/) for word embeddings
 
 ## 📧 Contact
-
+Mayank Ojha B.Tech Computer Science Engineering (Artificial Intelligence – IBM) Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore 📍 Indore, Madhya Pradesh, India 📞 +91 89629 72784 📧 mayankojha2228@gmail.com 🔗 LinkedIn: https://linkedin.com/in/mayankojha2228
 For questions or support, please open an issue on GitHub or Hugging Face.
 
 ---
